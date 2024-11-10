@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{F2E7D27C-F98E-4569-AED7-0D7691801EE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B2D60C4C-5737-4D19-8E02-C3DA53DDB800}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C44EAF58-41A3-4ACE-BA24-361AC8EBAE2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{80EFA4F1-5D99-4D01-AD63-F2A5E628D234}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EC3F4EEA-AA15-4B9A-89BB-A1AAADE69595}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{D4A13E38-FBA9-43DC-A3DE-5BA12F86A14B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.WpfUi", "MusicReviewer.WpfUi\MusicReviewer.WpfUi.csproj", "{04ACB599-0530-49B9-A69F-DB35E60D663D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Application", "MusicReviewer.Application\MusicReviewer.Application.csproj", "{633720B4-DD9F-43E1-8F68-24778EB19CE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Domain", "MusicReviewer.Domain\MusicReviewer.Domain.csproj", "{697E3437-CBB4-4561-8254-F9DB87A332EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7F782236-245B-4C5C-9684-663EFF60C6F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{210D2CA0-D553-4028-B1C9-CC7D4272DB51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Application.Tests", "MusicReviewer.Application.Tests\MusicReviewer.Application.Tests.csproj", "{5A686B6C-693D-45F7-832C-3505A0E4E560}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04ACB599-0530-49B9-A69F-DB35E60D663D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04ACB599-0530-49B9-A69F-DB35E60D663D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04ACB599-0530-49B9-A69F-DB35E60D663D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04ACB599-0530-49B9-A69F-DB35E60D663D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633720B4-DD9F-43E1-8F68-24778EB19CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633720B4-DD9F-43E1-8F68-24778EB19CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633720B4-DD9F-43E1-8F68-24778EB19CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633720B4-DD9F-43E1-8F68-24778EB19CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697E3437-CBB4-4561-8254-F9DB87A332EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697E3437-CBB4-4561-8254-F9DB87A332EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697E3437-CBB4-4561-8254-F9DB87A332EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697E3437-CBB4-4561-8254-F9DB87A332EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4A13E38-FBA9-43DC-A3DE-5BA12F86A14B} = {B2D60C4C-5737-4D19-8E02-C3DA53DDB800}
+		{04ACB599-0530-49B9-A69F-DB35E60D663D} = {D4A13E38-FBA9-43DC-A3DE-5BA12F86A14B}
+		{633720B4-DD9F-43E1-8F68-24778EB19CE8} = {7F782236-245B-4C5C-9684-663EFF60C6F0}
+		{697E3437-CBB4-4561-8254-F9DB87A332EC} = {80EFA4F1-5D99-4D01-AD63-F2A5E628D234}
+		{7F782236-245B-4C5C-9684-663EFF60C6F0} = {C44EAF58-41A3-4ACE-BA24-361AC8EBAE2E}
+		{210D2CA0-D553-4028-B1C9-CC7D4272DB51} = {C44EAF58-41A3-4ACE-BA24-361AC8EBAE2E}
+		{5A686B6C-693D-45F7-832C-3505A0E4E560} = {210D2CA0-D553-4028-B1C9-CC7D4272DB51}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ACF3CEF-C990-4A5F-8C67-66FBF9EDC187}
+	EndGlobalSection
+EndGlobal
