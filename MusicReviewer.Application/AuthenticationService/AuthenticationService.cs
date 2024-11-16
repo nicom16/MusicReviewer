@@ -8,7 +8,9 @@ namespace MusicReviewer.Application.AuthenticationService
 {
     public class AuthenticationService
     {
-        public AuthenticationResult AuthenticateUser(UserLogginInDto userDto)
+        public AuthenticationService() { }
+
+        public AuthenticationResult AuthenticateUser(LoginRequest loginRequest)
         {
             throw new NotImplementedException();
         }
