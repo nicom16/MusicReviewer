@@ -1,4 +1,6 @@
-﻿using App = MusicReviewer.Application.AuthenticationService;
+﻿using Moq;
+using MusicReviewer.Application.Repositories;
+using App = MusicReviewer.Application.AuthenticationService;
 
 namespace MusicReviewer.Application.Tests.AuthenticationService
 {
@@ -10,7 +12,18 @@ namespace MusicReviewer.Application.Tests.AuthenticationService
         [SetUp]
         public void SetUp()
         {
-            _authenticationService = new App.AuthenticationService();
+            var registeredUserRepository = new Mock<IRegisteredUserRepository>();
+            var expectedOutput = new RegisteredUserDto() 
+            { 
+                Id = Guid.NewGuid(), 
+                Username = Constants.VALID_USERNAME, 
+                Password = Constants.CORRECT_PASSWORD 
+            };
+            registeredUserRepository 
+                .Setup(x => x.GetRegisteredUserByUsername(Constants.VALID_USERNAME))
+                .Returns(expectedOutput);
+
+            _authenticationService = new App.AuthenticationService(registeredUserRepository.Object);
         }
 
         [Test]
@@ -20,9 +33,9 @@ namespace MusicReviewer.Application.Tests.AuthenticationService
                 .WithValidUsername()
                 .WithCorrectPassword();
 
-            var authenticationResult = _authenticationService.AuthenticateUser(userDto);
+            RegisteredUserDto registeredUserDto = _authenticationService.AuthenticateUser(userDto);
 
-            Assert.IsNotNull(authenticationResult);
+            Assert.IsNotNull(registeredUserDto);
         }
     }
 }

@@ -1,18 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MusicReviewer.Application.AuthenticationService.Exceptions;
+using MusicReviewer.Application.Repositories;
 
 namespace MusicReviewer.Application.AuthenticationService
 {
-    public class AuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
-        public AuthenticationService() { }
+        private readonly IRegisteredUserRepository _registeredUserRepository;
 
-        public AuthenticationResult AuthenticateUser(LoginRequest loginRequest)
+        public AuthenticationService(IRegisteredUserRepository registeredUserRepository)
         {
-            throw new NotImplementedException();
+            _registeredUserRepository = registeredUserRepository;
+        }
+
+        public RegisteredUserDto AuthenticateUser(LoginRequest loginRequest)
+        {
+            RegisteredUserDto registeredUserDto = 
+                _registeredUserRepository.GetRegisteredUserByUsername(loginRequest.Username);
+
+            if (registeredUserDto == null)
+                throw new UserNotFoundException();
+
+            if (registeredUserDto.Password != loginRequest.Password)
+                throw new InvalidPasswordException();
+
+            return registeredUserDto;
         }
     }
 }
