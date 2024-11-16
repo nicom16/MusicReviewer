@@ -1,6 +1,8 @@
 ﻿using Moq;
+using MusicReviewer.Application.AuthenticationService.Exceptions;
 using MusicReviewer.Application.Repositories;
-using App = MusicReviewer.Application.AuthenticationService;
+using App = MusicReviewer.Application.AuthenticationService.Implementations;
+using Dtos = MusicReviewer.Application.AuthenticationService.Dtos;
 
 namespace MusicReviewer.Application.Tests.AuthenticationService
 {
@@ -16,26 +18,38 @@ namespace MusicReviewer.Application.Tests.AuthenticationService
             var expectedOutput = new RegisteredUserDto() 
             { 
                 Id = Guid.NewGuid(), 
-                Username = Constants.VALID_USERNAME, 
+                Username = Constants.EXISTING_USERNAME, 
                 Password = Constants.CORRECT_PASSWORD 
             };
             registeredUserRepository 
-                .Setup(x => x.GetRegisteredUserByUsername(Constants.VALID_USERNAME))
+                .Setup(x => x.GetRegisteredUserByUsername(Constants.EXISTING_USERNAME))
                 .Returns(expectedOutput);
 
             _authenticationService = new App.AuthenticationService(registeredUserRepository.Object);
         }
 
         [Test]
-        public void AuthenticateUser_OnUser_ReturnsAuthenticationResult()
+        public void AuthenticateUser_OnExistingUser_ReturnsRegisteredUser()
         {
-            var userDto = new App.LoginRequest() 
-                .WithValidUsername()
+            var userDto = new Dtos.LoginRequest() 
+                .WithExistingUsername()
                 .WithCorrectPassword();
 
             RegisteredUserDto registeredUserDto = _authenticationService.AuthenticateUser(userDto);
 
             Assert.IsNotNull(registeredUserDto);
+        }
+
+        [Test]
+        public void AuthenticateUser_OnUnexistingUsername_ThrowsException()
+        {
+            var userDto = new Dtos.LoginRequest() 
+                .WithExistingUsername()
+                .WithCorrectPassword();
+
+            RegisteredUserDto registeredUserDto = _authenticationService.AuthenticateUser(userDto);
+
+            //Assert.Throws();
         }
     }
 }

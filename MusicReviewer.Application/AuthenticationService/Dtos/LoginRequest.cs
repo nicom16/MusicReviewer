@@ -1,4 +1,4 @@
-﻿namespace MusicReviewer.Application.AuthenticationService
+﻿namespace MusicReviewer.Application.AuthenticationService.Dtos
 {
     public record LoginRequest
     {

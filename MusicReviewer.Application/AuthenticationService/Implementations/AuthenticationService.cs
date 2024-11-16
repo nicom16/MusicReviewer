@@ -1,7 +1,9 @@
-﻿using MusicReviewer.Application.AuthenticationService.Exceptions;
+﻿using MusicReviewer.Application.AuthenticationService.Dtos;
+using MusicReviewer.Application.AuthenticationService.Exceptions;
+using MusicReviewer.Application.AuthenticationService.Interfaces;
 using MusicReviewer.Application.Repositories;
 
-namespace MusicReviewer.Application.AuthenticationService
+namespace MusicReviewer.Application.AuthenticationService.Implementations
 {
     public class AuthenticationService : IAuthenticationService
     {
@@ -14,7 +16,7 @@ namespace MusicReviewer.Application.AuthenticationService
 
         public RegisteredUserDto AuthenticateUser(LoginRequest loginRequest)
         {
-            RegisteredUserDto registeredUserDto = 
+            RegisteredUserDto registeredUserDto =
                 _registeredUserRepository.GetRegisteredUserByUsername(loginRequest.Username);
 
             if (registeredUserDto == null)
