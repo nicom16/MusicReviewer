@@ -43,13 +43,20 @@ namespace MusicReviewer.Application.Tests.AuthenticationService
         [Test]
         public void AuthenticateUser_OnUnexistingUsername_ThrowsException()
         {
-            var userDto = new Dtos.LoginRequest() 
+            var userDto = new Dtos.LoginRequest()
+                .WithUnexistingUsername();
+
+            Assert.Throws<UserNotFoundException>(() => _authenticationService.AuthenticateUser(userDto));
+        }
+        
+        [Test]
+        public void AuthenticateUser_OnWrongPassword_ThrowsException()
+        {
+            var userDto = new Dtos.LoginRequest()
                 .WithExistingUsername()
-                .WithCorrectPassword();
+                .WithWrongPassword();
 
-            RegisteredUserDto registeredUserDto = _authenticationService.AuthenticateUser(userDto);
-
-            //Assert.Throws();
+            Assert.Throws<InvalidPasswordException>(() => _authenticationService.AuthenticateUser(userDto));
         }
     }
 }

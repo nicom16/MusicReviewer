@@ -15,17 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpf", "Wpf", "{D4A13E38-FBA9-43DC-A3DE-5BA12F86A14B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.WpfUi", "MusicReviewer.WpfUi\MusicReviewer.WpfUi.csproj", "{04ACB599-0530-49B9-A69F-DB35E60D663D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicReviewer.WpfUi", "MusicReviewer.WpfUi\MusicReviewer.WpfUi.csproj", "{04ACB599-0530-49B9-A69F-DB35E60D663D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Application", "MusicReviewer.Application\MusicReviewer.Application.csproj", "{633720B4-DD9F-43E1-8F68-24778EB19CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicReviewer.Application", "MusicReviewer.Application\MusicReviewer.Application.csproj", "{633720B4-DD9F-43E1-8F68-24778EB19CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Domain", "MusicReviewer.Domain\MusicReviewer.Domain.csproj", "{697E3437-CBB4-4561-8254-F9DB87A332EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicReviewer.Domain", "MusicReviewer.Domain\MusicReviewer.Domain.csproj", "{697E3437-CBB4-4561-8254-F9DB87A332EC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7F782236-245B-4C5C-9684-663EFF60C6F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{210D2CA0-D553-4028-B1C9-CC7D4272DB51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Application.Tests", "MusicReviewer.Application.Tests\MusicReviewer.Application.Tests.csproj", "{5A686B6C-693D-45F7-832C-3505A0E4E560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicReviewer.Application.Tests", "MusicReviewer.Application.Tests\MusicReviewer.Application.Tests.csproj", "{5A686B6C-693D-45F7-832C-3505A0E4E560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicReviewer.Persistence", "MusicReviewer.Persistence\MusicReviewer.Persistence.csproj", "{38F8F847-C58C-4E04-BD39-257DFC7514D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A686B6C-693D-45F7-832C-3505A0E4E560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F8F847-C58C-4E04-BD39-257DFC7514D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F8F847-C58C-4E04-BD39-257DFC7514D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F8F847-C58C-4E04-BD39-257DFC7514D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F8F847-C58C-4E04-BD39-257DFC7514D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{7F782236-245B-4C5C-9684-663EFF60C6F0} = {C44EAF58-41A3-4ACE-BA24-361AC8EBAE2E}
 		{210D2CA0-D553-4028-B1C9-CC7D4272DB51} = {C44EAF58-41A3-4ACE-BA24-361AC8EBAE2E}
 		{5A686B6C-693D-45F7-832C-3505A0E4E560} = {210D2CA0-D553-4028-B1C9-CC7D4272DB51}
+		{38F8F847-C58C-4E04-BD39-257DFC7514D3} = {F2E7D27C-F98E-4569-AED7-0D7691801EE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7ACF3CEF-C990-4A5F-8C67-66FBF9EDC187}
