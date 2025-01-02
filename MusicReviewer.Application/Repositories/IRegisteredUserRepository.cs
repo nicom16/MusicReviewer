@@ -2,6 +2,6 @@
 {
     public interface IRegisteredUserRepository
     {
-        RegisteredUserDto GetRegisteredUserByUsername(string username); 
+        RegisteredUser GetRegisteredUserByUsername(string username); 
     }
 }
